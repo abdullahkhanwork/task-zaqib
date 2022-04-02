@@ -18,6 +18,9 @@ return new class extends Migration
             $table->unsignedInteger('sale_id');
             $table->index('sale_id');
             $table->foreign('sale_id')->references('id')->on('sales')->onDelete('cascade');
+            $table->unsignedInteger('product_id');
+            $table->index('product_id');
+            $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
             $table->integer('qty');
             $table->integer('price');
             $table->timestamps();

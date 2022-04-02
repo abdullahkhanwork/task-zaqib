@@ -18,9 +18,6 @@ return new class extends Migration
             $table->unsignedInteger('customer_id');
             $table->index('customer_id');
             $table->foreign('customer_id')->references('id')->on('customer')->onDelete('cascade');
-            $table->unsignedInteger('product_id');
-            $table->index('product_id');
-            $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
             $table->timestamps();
         });
     }
